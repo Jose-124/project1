@@ -13,7 +13,7 @@ int main() {
     cout << "Enter your name: ";
     cin >> name;
 
-    cout << "Enter all four quiz grades (separated by spaces): ";
+    cout << "Enter all four quiz grades : ";
     cin >> quiz1 >> quiz2 >> quiz3 >> quiz4;
 
     // Determine the lowest score
@@ -35,6 +35,18 @@ int main() {
     double total = quiz1 + quiz2 + quiz3 + quiz4;
     double average = (total - lowest) / 3.0;
 
+     if (average >= 90){
+        cout << "Your letter grade is an A!" << endl;
+    }
+    else if (average <= 89 && average >= 80){
+        cout << "Your letter grade is a B. " << endl;
+    }
+    else if (average <= 79 && average >= 70 ){
+        cout << "Your letter grade is a C." << endl;
+    }
+        else
+            cout << "You failed." << endl;
+    
     // Format and display output
     cout << fixed << setprecision(2); // Show 2 decimal places
 
